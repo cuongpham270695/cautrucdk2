@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+    <label for="tinhthue">Nhập thu nhập:
+    <input id="tinhthue" type="number"> triệu đồng
+    </label><br />
+    <button type="button" onclick="tinh()">Tính</button>
+    <h4 id="thue"></h4>
+    <script type="text/javascript">
+        function tinh(){
+            var n=parseFloat(document.getElementById("tinhthue").value);
+            if (n<=5)
+            {
+                var tol= n*5/100;
+                document.getElementById("thue").innerHTML="Thuế thu nhập cá nhân của bạn là: " +tol +"triệu đồng";
+            }
+            else if(n<=10)
+            {
+                var tol= n*10/100 - 0.25;
+                document.getElementById("thue").innerHTML="Thuế thu nhập cá nhân của bạn là: " +tol +" triệu đồng";
+            }
+            else if (n<=18)
+            {
+                var tol= n*15/100 - 0.75;
+                document.getElementById("thue").innerHTML="Thuế thu nhập cá nhân của bạn là: " +tol +" triệu đồng";
+            }
+            else if (n<=32)
+            {
+                var tol= n*20/100 - 1.65;
+                document.getElementById("thue").innerHTML="Thuế thu nhập cá nhân của bạn là: " +tol +" triệu đồng";
+            }
+            else if (n<=52)
+            {
+                var tol= n*25/100 - 3.25;
+                document.getElementById("thue").innerHTML="Thuế thu nhập cá nhân của bạn là: " +tol +" triệu đồng";
+            }
+            else if (n<=80)
+            {
+                var tol= n*30/100 - 5.85;
+                document.getElementById("thue").innerHTML="Thuế thu nhập cá nhân của bạn là: " +tol +" triệu đồng";
+            }
+            else
+            {
+                var tol= n*35/100 - 9.85;
+                document.getElementById("thue").innerHTML="Thuế thu nhập cá nhân của bạn là: " +tol +" triệu đồng";
+            }
+        }
+    </script>
+</body>
+</html>

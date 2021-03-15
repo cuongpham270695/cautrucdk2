@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+    <label for="sodien">Nhập số điện sử dụng</label>
+    <input type="number" id="sodien">
+    <button type="button" onclick="tinhgiadien()">Tính tiền</button>
+    <h4 id="tiendien"></h4>
+    <script type="text/javascript">
+        function tinhgiadien()
+        {
+            var n=parseInt(document.getElementById("sodien").value);
+            if(0<n && n<=50)
+            {
+                var money=(n*1678)*110/100;
+                document.getElementById("tiendien").innerHTML= "Tổng tiền điện của bạn trong tháng này là: " +money;
+            }
+            else if (50<n && n<=100)
+            {
+                var money= (50*1678+(n-50)*1734)*110/100;
+                document.getElementById("tiendien").innerHTML="Tổng tiền điện của bạn tháng này là: " +money;
+            }
+            else if (100<n && n<=200)
+            {
+                var money= (50*1678+50*1734+(n-100)*2014)*110/100;
+                document.getElementById("tiendien").innerHTML="Tổng tiền điện của bạn tháng này là: " +money;
+            }
+            else if(200<n && n<=300)
+            {
+                var money= (50*1678+50*1734+100*2014+(n-200)*2536)*110/100;
+                document.getElementById("tiendien").innerHTML="Tổng tiền điện của bạn tháng này là: " +money;
+            }
+            else if(300<n && n<=400)
+            {
+                var money= (50*1678+50*1734+100*2014+100*2536+(n-300)*2834)*110/100;
+                document.getElementById("tiendien").innerHTML="Tổng tiền điện của bạn tháng này là: " +money;
+            }
+            else
+            {
+                var money= (50*1678+50*1734+100*2014+100*2536+100*2834+(n-400)*2927)*110/100;
+                document.getElementById("tiendien").innerHTML="Tổng tiền điện của bạn tháng này là: " +money;
+            }
+        }
+    </script>
+</body>
+</html>

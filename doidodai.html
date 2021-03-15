@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi từ meter sang feet</title>
+</head>
+<body>
+        <label for="distance">Nhập độ dài:</label>
+        <input type="number" id="distance">
+        <button type="button" onclick="Change()">Chuyển đổi</button>
+        <h4 id="feet"></h4>
+        <script type="text/javascript">
+            function Change(){
+              var a= parseFloat(document.getElementById("distance").value);
+              if (a>= 0){
+                  var b = a*3.2808;
+                  document.getElementById("feet").innerHTML= +a +"m = " +b +"ft";
+              }
+              else {
+                  document.getElementById("feet").innerHTML= "Nhập sai, mời nhập lại!";
+              }
+            }
+        </script>
+</body>
+</html>

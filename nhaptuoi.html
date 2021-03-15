@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra tuổi</title>
+</head>
+<body>
+    <label for="age">Nhập số:</label>
+    <input type="number" id="age">
+    <button type="button" onclick="checkage()">Kiểm tra</button>
+    <h4 id="tuoi"></h4>
+    <script type="text/javascript">
+        function checkage(){
+            var num= parseInt(document.getElementById("age").value);
+            if (num>0 && num<120)
+            {
+                document.getElementById("tuoi").innerHTML= +num +" là tuổi của một người!"
+            }
+            else
+            {
+                document.getElementById("tuoi").innerHTML= +num +" không phải là tuổi của một người!"
+            }
+        }
+    </script>
+</body>
+</html>

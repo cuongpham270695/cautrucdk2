@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính lãi ngân hàng</title>
+</head>
+<body>
+    <label for="borrow">Nhập số tiền khách vay:
+    <input type="number" id="borrow">triệu đồng
+    </label><br />
+    <label for="month">Nhập số tháng vay:
+        <input type="number" id="month">tháng</label><br />
+    <label for="rate">Nhập lãi suất vay:
+        <input type="number" id="rate">%</label>
+    <button type="button" onclick="needToPay()">Tính tiền</button>
+    <h4 id="total"></h4>
+    <script type="text/javascript">
+        function needToPay(){
+            var borrow=parseFloat(document.getElementById("borrow").value);
+            var month=parseInt(document.getElementById("month").value);
+            var principal=borrow/month;
+            var rate= (parseFloat(document.getElementById("rate").value))/100;
+            var interest= (borrow-principal)*rate/month;
+            document.getElementById("total").innerHTML="Tổng số tiền phải gửi trong" +month +"tháng là: " +(borrow+interest) +" triệu đồng";
+        }
+    </script>
+</body>
+</html>

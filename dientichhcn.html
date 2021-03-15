@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích hình chữ nhật</title>
+</head>
+<body>
+        <label for="canh1">Nhập cạnh a:</label>
+        <input type="number" id="canh1">
+        <label for="canh2">Nhập cạnh b:</label>
+        <input type="number" id="canh2">
+        <button type="button" onclick="tinhdt()">Tính</button>
+        <h4 id="dientich"></h4>
+        <script type="text/javascript">
+            function tinhdt(){
+                var a= document.getElementById("canh1").value;
+                var b= document.getElementById("canh2").value;
+                var s= a*b;
+                if(a>0&&b>0){
+                    document.getElementById("dientich").innerHTML= "Diện tích hình chữ nhật là: " +s;
+                }
+                else
+                {
+                    document.getElementById("dientich").innerHTML= "Mời nhập lại!"
+                }
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính diện tích tam giac vuông</title>
+</head>
+<body>
+<label for="a">Nhập cạnh kề thứ nhất:</label>
+<input type="number" id="a">
+<label for="b">Nhập cạnh kề thứ hai:</label>
+<input type="number" id="b">
+<button type="button" onclick="check()">Tính</button>
+<h4 id="kq"></h4>
+<script type="text/javascript">
+    function check() {
+        var a = parseFloat(document.getElementById("a").value);
+        var b = parseFloat(document.getElementById("b").value);
+        if (a > 0 && b > 0) {
+            var s = a * b / 2;
+            document.getElementById("kq").innerHTML = "Diện tích hình tam giác này là:" + s;
+        } else {
+            document.getElementById("kq").innerHTML = "Mời nhập lại!";
+        }
+    }
+</script>
+</body>
+</html>

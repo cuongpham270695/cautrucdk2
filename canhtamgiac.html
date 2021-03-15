@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra cạnh tam giác</title>
+</head>
+<body>
+    <label for="a">Nhập cạnh thứ nhất:</label>
+    <input type="number" id="a">
+    <label for="b">Nhập cạnh thứ hai:</label>
+    <input type="number" id="b">
+    <label for="c">Nhập cạnh thứ ba:</label>
+    <input type="number" id="c">
+    <button type="button" onclick="check()">Kiểm tra</button>
+    <h4 id="kq"></h4>
+    <script type="text/javascript">
+        function check(){
+            var a= parseFloat(document.getElementById("a").value);
+            var b= parseFloat(document.getElementById("b").value);
+            var c= parseFloat(document.getElementById("c").value);
+            if (a+b>c && a+c>b && b+c>a && a>0 && b>0 && c>0)
+            {
+                document.getElementById("kq").innerHTML="a,b,c có thể là 3 cạnh của một tam giác!";
+            }
+            else
+            {
+                document.getElementById("kq").innerHTML="a,b,c không phải là cạnh của một tam giác!";
+            }
+        }
+    </script>
+</body>
+</html>
